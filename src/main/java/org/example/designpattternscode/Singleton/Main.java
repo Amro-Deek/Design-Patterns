@@ -28,6 +28,8 @@ public class Main extends Application {
         prevBtn.setOnAction(e -> player.clickPrevious());
         lockBtn.setOnAction(e -> player.clickLock());
 
+        //
+
         showLogsBtn.setOnAction(e -> {
             logArea.clear();
             Logger.getInstance().getLogHistory().forEach(log -> logArea.appendText(log + "\n"));
@@ -35,7 +37,6 @@ public class Main extends Application {
         clearLogsBtn.setOnAction(e -> {
             logArea.clear();
             Logger.getInstance().removeHistory();
-
         });
 
         HBox controls = new HBox(10, playBtn, nextBtn, prevBtn, lockBtn, showLogsBtn,clearLogsBtn);
@@ -51,4 +52,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+    // to be added ..
 }
